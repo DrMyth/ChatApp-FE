@@ -61,7 +61,7 @@ export const Startup = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <div className="flex xs:flex-row flex-col sm:gap-2 gap-0.5 ">
+          <div className="flex sm:flex-row flex-col sm:gap-2 gap-0.5 ">
             <input
               type="text"
               placeholder="Enter Room Code"
