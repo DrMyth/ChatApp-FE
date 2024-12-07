@@ -40,7 +40,7 @@ export const ChatUI = () => {
 
   useEffect(() => {
     setLoading(true);
-    const ws = new WebSocket("ws://chatapp-be-production.up.railway.app");
+    const ws = new WebSocket("wss://chatapp-be-production.up.railway.app");
     wsRef.current = ws;
     ws.onmessage = (e) => {
       const data = JSON.parse(e.data);
