@@ -20,11 +20,16 @@ export const ChatUI = () => {
   const [loading, setLoading] = useState(true);
 
   function sendMessage() {
+    if(!input.trim()){
+      alert("Please enter a message to send");
+      return;
+    }
+
     wsRef.current?.send(
       JSON.stringify({
         type: "chat",
         payload: {
-          message: input,
+          message: input.trim(),
         },
       })
     );
@@ -40,7 +45,7 @@ export const ChatUI = () => {
 
   useEffect(() => {
     setLoading(true);
-    const ws = new WebSocket("wss://chatapp-be-production.up.railway.app");
+    const ws = new WebSocket("wss://chatapp-be-production-c8d3.up.railway.app");
     wsRef.current = ws;
     ws.onmessage = (e) => {
       const data = JSON.parse(e.data);
