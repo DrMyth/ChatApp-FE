@@ -9,7 +9,7 @@ export const TopBar = ({children}) => {
           <div className="flex items-center gap-1">
             <ChatIcon />
             <div className="text-white font-semibold text-2xl">
-              Real Time Chat
+              Real Time Chat with me ***********
             </div>
           </div>
           <div className="text-secondary text-sm mt-1 mb-6">
