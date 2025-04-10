@@ -9,11 +9,11 @@ export const TopBar = ({children}) => {
           <div className="flex items-center gap-1">
             <ChatIcon />
             <div className="text-white font-semibold text-2xl">
-              Real Time Chat <b>Version 2</b>
+              Real Time Chat <b>Version 3</b> 
             </div>
           </div>
           <div className="text-secondary text-sm mt-1 mb-6">
-            temporary room that expires after all users exit
+            temporary room that expires after all users exit (Testing for CI)
           </div>
             {children}
         </div>
